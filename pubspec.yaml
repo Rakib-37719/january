@@ -39,6 +39,8 @@ dependencies:
   table_calendar: ^3.0.9
   # one_clock: ^1.0.7
   flutter_analog_clock: ^1.0.3
+  #youtube_player_flutter: ^8.1.2
+  url_launcher: ^6.1.8
 
 dev_dependencies:
   flutter_test:
