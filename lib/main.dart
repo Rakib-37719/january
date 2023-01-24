@@ -116,24 +116,29 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: EdgeInsets.all(25),
                   color: Colors.white.withOpacity(0.5),
-                  child: Column(
-                    children: [
-                      ListTile(leading: Image(
-                        image: AssetImage('assets/images/y.png',),
-                      ),title: Text('Shopping'),),
-                      ListTile(leading: Image(
-                        image: AssetImage('assets/images/y.png',),
-                      ),title: Text('Shopping'),),
-                      ListTile(leading: Image(
-                        image: AssetImage('assets/images/y.png',),
-                      ),title: Text('Shopping'),),
-                      ListTile(leading: Image(
-                        image: AssetImage('assets/images/y.png',),
-                      ),title: Text('Shopping'),),
-                      ListTile(leading: Image(
-                        image: AssetImage('assets/images/y.png',),
-                      ),title: Text('Shopping'),),
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        ListTile(leading: Image(
+                          image: AssetImage('assets/images/y.png',),
+                        ),title: Text('Shopping'),),
+                        ListTile(leading: Image(
+                          image: AssetImage('assets/images/y.png',),
+                        ),title: Text('Shopping'),),
+                        ListTile(leading: Image(
+                          image: AssetImage('assets/images/y.png',),
+                        ),title: Text('Shopping'),),
+                        ListTile(leading: Image(
+                          image: AssetImage('assets/images/y.png',),
+                        ),title: Text('Shopping'),),
+                        ListTile(leading: Image(
+                          image: AssetImage('assets/images/y.png',),
+                        ),title: Text('Shopping'),),
+                        ListTile(leading: Image(
+                          image: AssetImage('assets/images/y.png',),
+                        ),title: Text('Shopping'),),
+                      ],
+                    ),
                   ),
                 ),
                 myCard(title: 'Recipes',),
