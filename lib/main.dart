@@ -113,32 +113,37 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 myCard(title: 'Weather',),
-                myCard(title: 'Shopping',),
+                Container(
+                  padding: EdgeInsets.all(25),
+                  color: Colors.white.withOpacity(0.5),
+                  child: Column(
+                    children: [
+                      ListTile(leading: Image(
+                        image: AssetImage('assets/images/y.png',),
+                      ),title: Text('Shopping'),),
+                      ListTile(leading: Image(
+                        image: AssetImage('assets/images/y.png',),
+                      ),title: Text('Shopping'),),
+                      ListTile(leading: Image(
+                        image: AssetImage('assets/images/y.png',),
+                      ),title: Text('Shopping'),),
+                      ListTile(leading: Image(
+                        image: AssetImage('assets/images/y.png',),
+                      ),title: Text('Shopping'),),
+                      ListTile(leading: Image(
+                        image: AssetImage('assets/images/y.png',),
+                      ),title: Text('Shopping'),),
+                    ],
+                  ),
+                ),
                 myCard(title: 'Recipes',),
                 Expanded(
                   child: Container(
                     color: Colors.white.withOpacity(0.5),
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(50.0),
-                              child: InkWell(
-                                onTap: () => setState(() {
-                                  _launched = _launchInBrowser(toLaunch);
-                                }),
-                                child: Image(
-                                  image: AssetImage('assets/images/y.png',),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    child: ItemWithLink(directoryName: 'Walcart',image: Image(
+                      image: AssetImage('assets/images/y.png',),
+                    ),),),
                   ),
-                ),
               ],
             ),
             GridView.count(
@@ -175,6 +180,39 @@ class _HomePageState extends State<HomePage> {
             /// 2nd Page
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ItemWithLink extends StatefulWidget {
+  const ItemWithLink({Key? key,required this.directoryName,required this.image});
+final String directoryName;
+final Widget image;
+//final String url;
+
+  @override
+  State<ItemWithLink> createState() => _ItemWithLinkState();
+}
+
+class _ItemWithLinkState extends State<ItemWithLink> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: InkWell(
+                // onTap: () => setState(() {
+                //   _launched = _launchInBrowser(url);
+                // }),
+                child: widget.image,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
